@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-View Captioning with Semantic Delta Re-Ranking for Zero-Shot Composed Video Retrieval</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- MathJax -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+        displayMath: [ ['$$', '$$'], ['\\[', '\\]'] ],
+        processEscapes: true, 
+        tags: 'all',
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script
+    type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Multi-View Captioning with Semantic Delta Re-Ranking for Zero-Shot Composed Video Retrieval</h1>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Zhixiang Ding<sup><span style="color:blue">1</span></sup>, Lilong Liu<sup><span style="color:green">2</span></sup>, Zhenyu Yang<sup><span style="color:blue">1</span></sup>, Shengsheng Qian<sup><span style="color:blue">1</span></sup>
+            </span>
+          </div>
+          
+
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <sup><span style="color:blue">1</span></sup>Institute of Automation, Chinese Academy of Sciences, <sup><span style="color:green">2</span></sup>Zhengzhou University
+            </span>
+          </div>
+          
+
+	
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <strong><span style="color:gray">ICIG'2025</span> (<span style="color:red">Oral</span>🔥)</strong>
+            </span>
+          </div>
+          
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              
+              <span class="link-block">
+                <a href="https://icig.csig.org.cn/2025/6172/list.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              
+              <!-- Video Link. -->
+              
+              <!-- Code Link. -->
+              
+              <span class="link-block">
+                <a href="https://github.com/yzy-bupt/MCSD"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+              <!-- Dataset Link. -->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+<div class="container is-max-desktop">
+
+<div class="content">
+  <!-- Using HTML to center the abstract -->
+
+<div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+        <h2>Abstract</h2>
+        <div class="content has-text-justified">
+Composed Video Retrieval (CVR) aims to retrieve video relevant to a query video while incorporating specific changes described in modification text. For Zero-Shot Composed Video Retrieval (ZS-CVR), current methods utilize vision-language models to convert the query video into a single caption, subsequently merged with modification text to generate an edited caption for retrieval. However, the modification text doesn't clearly specify which elements to preserve from the query video, leading to possible misalignment between edited caption and target video. Additionally, the final retrieval result should not be determined solely by the similarity between edited caption and candidate videos but also incorporate the semantic delta arising from the modification text. To address these issues, we propose Multi-View Captioning with Semantic Delta Re-Ranking (MCSD) method for ZS-CVR. Specifically, the Multi-View Captioning Module to generate captions covering potential semantics of the target video, the Semantic Delta Re-Ranking Module that computes the semantic delta between the original and edited captions, to adjust similarity scores and re-ranks the retrieval results. Extensive experiments on two benchmarks demonstrate that the proposed MCSD method achieves state-of-the-art performance in ZS-CVR.
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h2 id="demo"><strong>Demo</strong></h2>
+<video autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+  <source src="/static/video/Demo.mp4" type="video/mp4" />
+</video>
+
+<blockquote>
+  <p>This is a data demo in our MCSD.</p>
+</blockquote>
+
+<h2 id="overview"><strong>Overview</strong></h2>
+<p><strong>Motivation: <em>Video content is inherently dense in semantic information.</em></strong> A single caption often fails to capture the full semantics of a target video, whereas captions generated from multiple perspectives can provide more comprehensive coverage of its potential meanings.</p>
+
+<p><img src="/static/image/case.png" alt="overview" /></p>
+
+<p><em>Figure 1: Illustration of multiple perspectives vs. single caption.</em></p>
+
+<h2 id="mcsd"><strong>MCSD</strong></h2>
+
+<p>To address these issues, we propose Multi-View Captioning with Semantic Delta Re-Ranking (MCSD) for ZS-CVR. Our method features:</p>
+
+<p>(1) <strong>Multi-View Captioning Module</strong> to generate captions covering potential semantics of the target video;</p>
+
+<p>(2) <strong>Semantic Delta Re-Ranking Module</strong> that computes the semantic delta between original and edited captions to adjust similarity scores and re-rank retrieval results.</p>
+
+<p><img src="/static/image/method.png" alt="model_framework" /></p>
+
+<p><em>Figure 2: Architecture of the proposed MCSD method.</em></p>
+
+<h2 id="citation">Citation</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TBC
+</code></pre></div></div>
+
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a
+            href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

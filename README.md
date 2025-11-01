@@ -2,7 +2,7 @@
 
 # **Multi-View Captioning with Semantic Delta Re-Ranking for Zero-Shot Composed Video Retrieval**
 
-[\[🚀 Project Homepage\]](https://yzy-bupt.github.io/MCSD/) [\[📖 Paper\]](https://icig.csig.org.cn/2025/6172/list.html)
+[\[🚀 Project Homepage\]](https://yzy-bupt.github.io/MCSD/) [\[📖 Paper\]](https://www.springerprofessional.de/en/multi-view-captioning-with-semantic-delta-re-ranking-for-zero-sh/51648836)
 
 </div>
 

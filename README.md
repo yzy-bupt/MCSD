@@ -92,7 +92,7 @@ python code/generate_edit_captions.py
 ```
 
 ### 3. Step 3
-To evaluate ours method in benchmark, please run the following command:
+To evaluate ours method, please run the following command:
 ```sh
 python code/retrieval_webcovr.py
 python code/retrieval_egocvr_global.py

@@ -29,7 +29,7 @@ Composed Video Retrieval (CVR) aims to retrieve video relevant to a query video 
 
 ## **Demo**
 <video autoplay controls muted loop playsinline height="100%">
-  <source src="/static/video/demo_mini.mp4" type="video/mp4">
+  <source src="/static/video/Demo.mp4" type="video/mp4">
 </video>
 
 > This is a data demo in our MCSD.

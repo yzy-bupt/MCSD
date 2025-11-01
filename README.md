@@ -72,21 +72,30 @@ To address these issues, we propose Multi-View Captioning with Semantic Delta Re
 ![framework](assets/method.png)
 
 ### 1. Step 1
-In order to ..., run ...
+Extract frames from the videos in WebVid-COVR and EgoCVR
 ```sh
-python src/step1.py
+python code/tools/extract_frames.py
+```
+then extract the corresponding video features.
+```sh
+python code/tools/video_feature.py
 ```
 
 ### 2. Step 2
-In order to ..., run ...
+Run this script to generate diverse captions, and then 
 ```sh
-python src/step2.py
+python code/generate_captions.py
+```
+run this script to generate the edited captions.
+```sh
+python code/generate_edit_captions.py
 ```
 
 ### 3. Step 3
-In order to ..., run ...
+To evaluate ours method in benchmark, please run the following command:
 ```sh
-python src/step3.py
+python code/retrieval_webcovr.py
+python code/retrieval_egocvr_global.py
 ```
 
 

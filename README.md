@@ -82,11 +82,11 @@ python code/tools/video_feature.py
 ```
 
 ### 2. Step 2
-Run this script to generate diverse captions, and then 
+Run this script to generate diverse captions
 ```sh
 python code/generate_captions.py
 ```
-run this script to generate the edited captions.
+then run this script to generate the edited captions.
 ```sh
 python code/generate_edit_captions.py
 ```
